@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Warkop Roeang Tenang</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+  /* Reset some default styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4ebe6;
+    color: #131212;
+    padding: 20PX;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  header {
+    background-color: #cde060;
+    color: #be1111;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 5px 10px rgb(197, 122, 122);
+    font-weight: bold;
+  }
+  header h1 {
+    font-family: "Lobster";
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+  nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 10px 20px;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+nav a {
+  display: inline-block;
+  color: rgb(202, 26, 26);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+nav a:focus {
+  color: rgb(255, 70, 70);
+  outline: none;
+
+}
+  .button{
+    background-color: wheat;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  header p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 8px;
+  }
+  .promo-section {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .promo-text {
+    flex: 1 1 400px;
+  }
+  .promo-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #b30000;
+  }
+  .promo-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #607c62;
+  }
+  #gambarBulat {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+  }
+  .promo-image {
+    flex: 1 1 400px;
+    text-align: center;
+  }
+  .promo-image img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgb(197, 122, 122);
+  }
+  .caption {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  .menu-category {
+      flex: 1;
+      min-width: 200px;
+    }
+  .menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgb(197, 122, 122);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .menu-section h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    color: #b30000;
+    margin-bottom: 10px;
+  }
+  .menu-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .menu-section h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #b30000;
+    margin-bottom: 30px;
+  }
+  #menu {
+    display: flex;
+    gap: 15rem;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 30px;
+    color: #b30000;
+    margin-top: 30px;
+  }
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #e0d4c3;
+    font-size: 1rem;
+  }
+   .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+     font-size: 1rem;
+  }
+   .item:hover {
+    transform: translateY(-10px);
+  }
+  .menu-column {
+    flex: 1;
+    min-width: 0;
+  }
+  .menu-category {
+    margin-bottom: 5rem;
+  }
+  .menu-item span:first-child {
+    font-weight: 600;
+  }
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #607c62;
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#info">INFO</a></li>
+      <li><a href="#menu">MENU</a></li>
+      <li><a href="#galeri">GALLERY</a></li>
+      <li> <a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Warkop Roeang Tenang</h1>
+    <p>THE HIDDEN WAROENG KOPI</p>
+  </header>
+  <main class="container">
+  <section class="promo-section">
+    <div class="promo-text">
+      <section id="about">
+      <h2>Welcome to Roeang Tenang</h2>
+      <p>The Hidden Waroeng Kopi. and The Freshest of Kopi</p>
+      <p>"Roeang Tenang" (ruang tenang),bisa di definisikan tempat ini
+        menawarkan suasana yang jauh dari kebisingan dan keramaian kota yang dinamis.
+      </p>
+    </section>
+    </div>
+    <div class="promo-image">
+      <img src="roeng tenang.jpg" alt="Cup of coffee with latte art" id="gambarBulat" />
+    </div>
+  </section>
+  <h2>Information</h2>
+  <section id="info">
+    <div class="promo-text">
+    <p>Event untuk minggu depan Tanggal minggu, 15 june 2025</p>
+    <div class="promo-image img">
+      <div class="item">
+      <article class="item"><img src="market.webp"></article>
+      <article class="item"><img src="pop up.jpg"></article>
+      <article class="item"><img src="pasaran.webp"></article>
+    </div>
+    </div>
+    </div>
+  </section>
+</head>
+<body>
+    <section>
+  <h2>Our Menu</h2>
+    <section class="menu-section" aria-label="Featured Coffee Menu">
+    <section id="menu">
+    <div class="menu-column">
+    <div class="menu-category">
+  <h2>ES KOPI SUSU</h2>
+    <div class="menu-item"><span>Basuki</span><span>18</span></div>
+    <div class="menu-item"><span>Marjan</span><span>18</span></div>
+    <div class="menu-item"><span>Saryono</span><span>18</span></div>
+    <div class="menu-item"><span>Permadi</span><span>18</span></div>
+    <div class="menu-item"><span>Laksono</span><span>18</span></div>
+  </div>
+    <div class="menu-category">
+  <h2>KOPI PANAS</h2>
+    <div class="menu-item"><span>Tubruk Robusta</span><span>10</span></div>
+    <div class="menu-item"><span>Tubruk Arabika</span><span>12</span></div>
+    <div class="menu-item"><span>Saring Robusta</span><span>11</span></div>
+    <div class="menu-item"><span>Saring Arabika</span><span>13</span></div>
+    <div class="menu-item"><span>Kopi Anteng</span><span>15</span></div>
+    <div class="menu-item"><span>Kopi Butter</span><span>15</span></div>
+    <div class="menu-item"><span>V60</span><span>20</span></div>
+  </div>
+    <div class="menu-category">
+  <h2>LONG BLACK</h2>
+    <div class="menu-item"><span>Long Black</span><span>13</span></div>
+    <div class="menu-item"><span>Long Black Lemon</span><span>15</span></div>
+    <div class="menu-item"><span>Long Black Berry</span><span>15</span></div>
+  </div>
+  </div>
+    <div class="menu-column">
+    <div class="menu-category">
+  <h2>SPECIAL MILK BASIC</h2>
+    <div class="menu-item"><span>Matcha Green</span><span>18</span></div>
+    <div class="menu-item"><span>Dark Choco</span><span>16</span></div>
+    <div class="menu-item"><span>Red Velvet</span><span>16</span></div>
+    <div class="menu-item"><span>Gayatri</span><span>15</span></div>
+    <div class="menu-item"><span>Safitri</span><span>15</span></div>
+   </div>
+    <div class="menu-category">
+  <h2>SPECIAL SODA BASIC</h2>
+    <div class="menu-item"><span>Leci Peach</span><span>15</span></div>
+    <div class="menu-item"><span>Leci Citrus</span><span>15</span></div>
+    <div class="menu-item"><span>Soda Bahagia</span><span>15</span></div>
+    <div class="menu-item"><span>Apple Mohito</span><span>15</span></div>
+    <div class="menu-item"><span>Guava Mohito</span><span>15</span></div>
+  </div>
+    <div class="menu-category">
+  <h2>SIMPLE SNACK</h2>
+    <div class="menu-item"><span>Kentang Goreng</span><span>10</span></div>
+    <div class="menu-item"><span>Singkong Keju</span><span>10</span></div>
+    <div class="menu-item"><span>Lumpia Jamur</span><span>10</span></div>
+    <div class="menu-item"><span>Roti Cokelat</span><span>10</span></div>
+  </div>
+  </div>
+</section>
+</section>
+</section>
+      <section id="galeri">
+    <h2>Gallery</h2>
+    <div class="promo-text">
+    <p>Tumpukan foto-foto menarik dari warkop Roeng Tenang.</p>
+    <div class="promo-image img">
+      <img src="indor.jpg" alt="Ruang In Door Warkop">
+      <img src="life musik.jpg" alt="Halaman Out Door Waekop">
+      <img src="outdor.jpg" alt="Event di Halaman Warkop">
+    </div>
+    </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="promo-text">
+      <p>Email : info@warkopruangtenang.com</p>
+      <p>Telepon : +62 5265 5566 8726</p>
+      </div>
+      </section>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/warkopruangtenang?igsh=MXNqdW3A3YTNqdQ==" target="_blank">Instagram</a>
+      <a href="https://maps.app.goo.gl/nwNHmJ9Hep3BMZYy8" target="_blank">Google Maps</a>
+      <a href="https://www.tiktok.com/@warkop.ruang.tena?_t=ZS-8wlFpXa3xzM&_r=1" target="_blank">TikTok</a>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
